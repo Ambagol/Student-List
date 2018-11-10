@@ -5,7 +5,7 @@ const Student = mongoose.model('Student');
 
 router.get('/', (req, res)=>{
     res.render("student/addOrEdit", {
-        viewTitle: "Insert Student"
+        viewTitle: "Insert Student Info"
     });
 })
 
@@ -24,7 +24,7 @@ function insertRecord(req,res){
     student.city = req.body.city;
     student.save((err, doc)=>{
         if(!err)
-        res.redirect('student/list');
+        res.redirect('/list');
         else{
             if(err.name === 'ValidationError'){
                  handleValidationError(err, req.body);
@@ -42,7 +42,7 @@ function insertRecord(req,res){
 function updateRecord(req, res){
     Student.findOneAndUpdate({_id:req.body._id}, req.body,{new:true}, (err,doc)=>{
         if(!err){
-            res.redirect('student/list');
+            res.redirect('/list');
         }else{
             if(err.name =='ValidationError'){
                 handleValidationError(err, req.body);
@@ -98,7 +98,7 @@ function handleValidationError(err,body){
 router.get('/delete/:id', (req,res)=>{
 Student.findByIdAndRemove(req.params.id,(err,doc)=>{
  if(!err){
-     res.redirect('/student/list');
+     res.redirect('/list');
  }
  else{console.log('Error in updating the employee :' + err);
  }
