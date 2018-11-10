@@ -20,4 +20,4 @@ app.listen(port,function(){
     
 });
 
-app.use('/student',studentController);
+app.use('/',studentController);
