@@ -1,6 +1,5 @@
-const mongoose =require('mongoose').MongoClient;
-var connectionUrl = "mongodb://ambagol:Heroku2@ds157923.mlab.com:57923/heroku_nt2fmg8m"
-mongoose.connect(connectionUrl, { useNewUrlParser:true}, (err)=> {if(!err){console.log('MongoDb Connection Success')};
-});
+const mongoose = require('mongoose');
+var connectionUrl = 'mongodb://ambagol:Heroku2@ds123619.mlab.com:23619/studentdb';
+mongoose.connect(connectionUrl, { useNewUrlParser: true });
 
-require('./student.model')
+require('./student.model');
