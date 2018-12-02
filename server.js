@@ -6,7 +6,7 @@ const exphbs = require('express-handlebars');
 const studentController = require('./controllers/studentController');
 const bodyparser =require('body-parser');
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 
 app.use(bodyparser.urlencoded({
     extended:true
