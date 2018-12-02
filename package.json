@@ -1,15 +1,16 @@
 {
   "name": "studentlist",
   "version": "1.0.0",
-  "description": "",
+  "description": "Add edit student list",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Ambagol",
   "engines": {
-    "node": "10.10.0"
+    "node": "10.10.0",
+    "npm": "6.4.1"
   },
   "license": "ISC",
   "dependencies": {
